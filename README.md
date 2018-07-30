@@ -7,7 +7,7 @@
 # How it Works
 
 1. Project point cloud onto the camera, using calibration information.
-![scans](https://user-images.githubusercontent.com/2068077/29998238-d66b1546-8fda-11e7-9d54-0716afb7b0c2.jpg)
+![scans](https://raw.githubusercontent.com/JinyongJeong/kitti_velo_to_img/master/result/um_000003.jpg)
 
 # Usage
 
