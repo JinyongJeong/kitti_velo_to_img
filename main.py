@@ -11,7 +11,7 @@ import sys
 
 def main():
     parser = argparse.ArgumentParser(description='Converter')
-    parser.add_argument('--data_root', type=str, help='Path to KITTI `data_road_velodyne`', default='data/KITTI/object')
+    parser.add_argument('--data_root', type=str, help='Path to KITTI `data_road_velodyne`', default='data/kitti/object')
     parser.add_argument('--cam-idx', type=int, help='Index of the camera being used', default=2)
     parser.add_argument('--dataset', type=str, choices=('training', 'testing'), help='Which dataset to run on',
                         default='training')

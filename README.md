@@ -10,7 +10,6 @@
 ![scans](https://raw.githubusercontent.com/JinyongJeong/kitti_velo_to_img/master/result/um_000003.jpg)
 
 # Usage
-
-1. Download the KITTI Road [base kit](http://www.cvlibs.net/download.php?file=data_road.zip) and [velodyne](http://www.cvlibs.net/download.php?file=data_road_velodyne.zip).
-2. Save `data_road` and `data_road_velodyne` in the root directory of this repository.
-3. Run the main script, and then projected image will be save in result forlder. 
+1. Make sure your kitti dataset format is like mmdetection3d(https://github.com/open-mmlab/mmdetection3d/blob/master/docs/data_preparation.md)
+2. Copy the "data" directory to the root of the repository.
+3. Run the main script, and then projected image will be save in result forlder.
