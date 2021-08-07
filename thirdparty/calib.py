@@ -1,7 +1,6 @@
 """Calib file from KITTI object detection benchmark, with modifications for KITTI road benchmark"""
 
 import os
-
 import numpy as np
 
 root_dir = os.path.dirname(os.path.abspath(__file__))
@@ -22,13 +21,11 @@ def get_inds(path, ext='.png'):
 
 def read_calib_file(path):
     float_chars = set("0123456789.e+- ")
-
     data = {}
-
-    # print(path)
-
     with open(path, 'r') as f:
         for line in f.readlines():
+            if line == '\n':
+                continue
             key, value = line.split(':', 1)
             value = value.strip()
             data[key] = value
@@ -38,9 +35,6 @@ def read_calib_file(path):
                     data[key] = np.array(list(map(float, value.split(' '))))
                 except ValueError:
                     pass  # casting error: data[key] already eq. value, so pass
-
-    # print(data)
-
     return data
 
 
@@ -54,8 +48,6 @@ def homogeneous_transform(points, transform, keep_last=False):
     transform : (M, N) array-like
         The right-multiplying transformation to apply.
     """
-
-    
 
     transform = transform.T
 
